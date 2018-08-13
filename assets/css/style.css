@@ -1,11 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
  .jumbotron {
-    color: black;
-    background-color: rgba(248, 243, 85, 0); 
-    opacity: .7;
+    background-color:rgb(32, 60, 88); 
+    color: rgb(241, 234, 234);
+    opacity: .9;
     margin-top: 50px;
     margin-left: auto;
  /*   width: 55%;  */
@@ -21,12 +17,10 @@ body {
      font-size: 20px;
      line-height: 2.5em;
      text-align: center;
-  /*    
-  color: white;
-  width: 65%; 
-  background-attachment: scroll;
-  background-size: 100%;
-     */
+}
+
+.card {
+  opacity: 0.9;
 }
 
 
