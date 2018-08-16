@@ -47,7 +47,7 @@ var config = {
     $("#frequency-input").val("");
 
     })
-
+    
 
     // 3.Collect data from firebase
     trainData.ref().on("child_added", function(childSnapshot) {
@@ -58,6 +58,8 @@ var config = {
       var destination = childSnapshot.val().destination;
       var firstTrain = childSnapshot.val().firstTrain;
       var frequency = childSnapshot.val().frequency;
+
+      console.log(typeof frequency);
 
       // When is the next train
       var remainder = moment().diff(moment.unix(firstTrain), "minutes")%frequency;
@@ -76,10 +78,9 @@ var config = {
        var newRow = $("<tr>").append(
         $("<td>").text(trainName),
         $("<td>").text(destination),
-        $("<td class='text-center'>").text(moment(frequency).format("hh:mm")),
+        $("<td class='text-center'>").text(frequency),
         $("<td class='text-center'>").text(arrival),
-        $("<td class='text-center'>").text(moment(minutes).format("hh:mm")),
-        
+        $("<td class='text-center'>").text(minutes + " m"),
       );
   
       // Append new row to the table in the DOM
