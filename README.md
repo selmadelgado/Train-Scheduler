@@ -1,4 +1,4 @@
-# Train-Scheduler Firebase Assignment
+# Train-Scheduler
 
 ### Live Link: 
 https://selmadelgado.github.io/Train-Scheduler/
